@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+    <title>post</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    for (var i = 100; i < 120; i++) {
+      var data = {
+        "adjust_price":"0",
+        "reservation_sort_id":i,
+        "patient_name":"\u5f6d\u80fd\u8f89"+i,
+        "reservation_start_time":"1480469400",
+        "schedule_id":"100064461",
+        "city_id":"20",
+        "city_name":"u5e7fu5dde",
+        "clinic_id":"251",
+        "clinic_name":"u5e7fu5ddeu9a8fu666fu5206u9662",
+        "coupon_discount":"100000",
+        "coupon_group_id":"246386946",
+        "coupon_id":"1",
+        "coupon_orig_discount":"100000",
+        "coupon_record_id":"40017",
+        "coupon_waterline":"1000000",
+        "deal_create_time":"1480389103",
+        "deal_id":"348000",
+        "deal_state":"18",
+        "deal_type":"4",
+        "doctor_id":"10251168381",
+        "doctor_name":"u5c0fu7c73",
+        "integral":"0",
+        "integral_conversion_rate":"0",
+        "integral_discount":"0",
+        "integral_orig_discount":"0",
+        "member_no":"",
+        "note":"",
+        "patient_age":"0",
+        "patient_birth":"",
+        "patient_id":i,
+        "patient_image":"",
+        "patient_sex":"0",
+        "patient_type":"0",
+        "pay_return_time":"0",
+        "pay_type":"2",
+        "payment_code":"0",
+        "payment_return_time":"0",
+        "price":"1400000",
+        "property":"16",
+        "receivable_price":"1500000",
+        "recipe_time":"1480389103",
+        "refund_fee":"0",
+        "refund_start_time":"0",
+        "reservation_end_time":"1480471200",
+        "reservation_phone":i,
+        "source":"3",
+        "user_id":i,
+        "status":1
+      }
+      $.post("http://admin-stg.gstzy.cn/Doctorpc/Api/registration",
+        data,
+        function(data,status){
+          console.log(data);
+        }
+      );
+    }
+    </script>
+  </body>
+</html>
