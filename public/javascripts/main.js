@@ -1,10 +1,6 @@
-$.get("/api",(data,status)=>{
-  console.log(data,status);
-});
-
 const get = (params,url) =>{
   return new Promise((resolve,reject)=>{
-    $.get(url,(data,status)=>{
+    $.get(url,params,(data,status)=>{
       resolve(data);
     });
   })
