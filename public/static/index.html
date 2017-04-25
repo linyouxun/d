@@ -10,6 +10,20 @@
     挂号开始：<input type="text" name="" value="" id="input">
     <button type="button" name="button" onclick="clickButton()"> button</button>
     <script type="text/javascript">
+
+    var url = "https://doc.gstzy.cn/api/cas-dev.gstzy.cn/api/userList";
+    var params = {
+    	app_id:'8',
+    	filter:'{"filter":[{"key":"raretype","value":1}]}',
+    }
+    $.post(url,
+      params,
+      function(data,status){
+        console.log(data);
+      }
+    );
+
+
     function clickButton(){
       for (var i = +($("#input")[0].value); i < +($("#input")[0].value)+10; i++) {
         var data = {
